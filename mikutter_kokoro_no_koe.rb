@@ -10,7 +10,7 @@ Plugin.create(:mikutter_kokoro_no_koe) do
   ) do |opt|
     begin
       message = Plugin[:gtk].widgetof(opt.widget).widget_post.buffer.text
-      message = "。○（#{message}）"
+      message = "｡oO( #{message} )"
       Plugin[:gtk].widgetof(opt.widget).widget_post.buffer.text = message
       
       if UserConfig[:you_thinks_immediate] then
