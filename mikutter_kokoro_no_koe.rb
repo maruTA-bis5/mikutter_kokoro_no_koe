@@ -22,6 +22,13 @@ Plugin.create(:mikutter_kokoro_no_koe) do
     end
   end
   settings "心の声" do
-    boolean('すぐに投稿する', :you_thinks_immediate)
+    settings "心の声" do
+      boolean('すぐに投稿する', :you_thinks_immediate)
+    end
+    closeup summary = ::Gtk::HBox.new(false, 10).pack_start(
+      Gtk::Label.new(
+        "mikutterコマンド（:you_thinks）を用意してありますので、\n" +
+        "お好きなショートカットキーを設定してお使いください。"
+      ), false, false, 16)
   end
 end
